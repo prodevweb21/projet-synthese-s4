@@ -1,0 +1,53 @@
+/*J'ai utilisé le flexbox pour aligner les elements de ma carte */
+@import '../../styles'
+@import '../../styles_mixin'
+
+body
+    color: $c-med-gris
+    
+.liste-card
+    display: inline-flex
+    justify-content: space-around
+    margin: 15px
+
+
+
+mat-card-title
+    display: flex
+    justify-content: flex-start
+
+
+
+mat-card-content
+    display: inline-flex
+    justify-content: center
+    font-family: $f-primaire
+
+
+
+button
+    margin: 5rem
+
+
+.liste-card   
+     margin-bottom: 5px
+
+
+
+.btn
+    &__button4
+        @include navbar_button
+        border-color: $c-iconCheck
+        color: $c-iconCheck
+        
+        
+.btn__button4:hover
+    @include hover_button
+
+    
+
+  
+
+
+
+

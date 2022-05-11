@@ -1,0 +1,26 @@
+/* Importation du style global */
+
+@import '../../styles'
+
+$icons: ("check": $c-iconCheck, "edit": $c-iconMAJ-secondaire, "supp": $c-iconSupp)
+
+@each $icon, $i in $icons
+    .btn__
+        &#{$icon}
+            color: $i
+
+div label
+    color: $c-gris-fonce
+    font-weight: bold
+    border-left-color: blue
+
+h3
+    color : $c-turquoise
+    font-weight: bold
+    font-size: 20px
+
+h5
+    color: $c-turquoise
+
+.align-droit
+    float: right

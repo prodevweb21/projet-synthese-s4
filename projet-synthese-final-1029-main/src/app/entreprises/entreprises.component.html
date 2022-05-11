@@ -1,0 +1,42 @@
+
+
+
+<div class="container-fluid p-0 m-0 " >
+<div class="container ">
+  <div class="row py-5 ">
+    <div class="col-12 f-c-med-gris"><h1>Entreprise</h1></div>
+  </div>
+  <div class="row pb-3">
+    <div class="col-12">
+      <button type="button" class="btn bg-c-bleu mb-4" [routerLink]="'../ajout-entreprise'">Ajouter une entreprise</button>
+    </div>
+  </div>
+<div class="row">
+  </div>
+  <div  class="row">
+    <div *ngFor="let entreprise of entreprises" class="col-sm-6">
+    <div (click)="(obtenirEntreprise(entreprise._id))" class="card mb-3 p-5 border-0">
+      <div class="row g-0">
+        <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center align-items-center ps-lg-5">
+          <img class="" src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
+        </div>
+
+        <div class="col-12 col-md-8 ps-lg-5">
+          <div class="card-body">
+            <h2 class="card-title">{{ entreprise.name }}</h2>
+            <p class="card-text small-text small-text-c-med-gris">{{ entreprise.city }}</p>
+            <p class="card-text small-text small-text-c-med-gris">{{ entreprise.province }}</p>
+            <p class="card-text small-text small-text-c-med-gris mb-4">{{ entreprise.address }}</p>
+
+            <p class="card-text small-text small-text-c-med-gris">Téléphone : {{ entreprise.contactPhone }}</p>
+            <!-- Le champ télécopieur n'existe pas dans les données donc j'ai mis le courriel à la place. -->
+            <p class="card-text small-text small-text-c-med-gris"> Courriel :{{ entreprise.contactEmail }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</div>
+</div>

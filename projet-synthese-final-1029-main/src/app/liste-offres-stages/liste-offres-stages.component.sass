@@ -1,0 +1,140 @@
+// *** Fait par Émilie Stratford ***
+// Feuille de style qui prend en charge la liste des offres de stages 
+// Flexbox
+    
+@import '../../styles.sass'
+@import '../../offreStage_mixin'
+
+.liste-offre-stage 
+    padding: 83px 164px
+    background: $c-bg-page
+    @media(max-width: 1200px)
+        padding: 60px 40px
+    @media(max-width: 599px)
+        padding: 60px 16px
+    
+    h1 
+        color: $c-med-gris
+
+    // Bouton ajouter un offre de stage
+    .btnAction 
+        display: inline-block
+        padding: 15px
+        background: $c-rouge
+        color: $c-blanc
+        border-radius: 8px
+        text-decoration: none
+        transition: 0.3s
+        margin: 70px 0 16px 0
+        @media(max-width:960px)
+            margin: 30px 0 16px 0
+            padding: 10px
+        &:hover
+            background: $c-med-rouge
+
+    // phrase visible à 900px seulement
+    .notice_MB
+        @media(min-width: 901px)
+            display: none
+        @media(max-width: 900px)
+            display: block
+
+    // Styles des items du tableau
+    &__items
+        padding: 135px 80px
+        background: $c-blanc
+        border-radius: 5px
+        @media(max-width: 1200px)
+            padding: 30px
+            overflow-x: scroll
+
+        .items-table
+            box-shadow: none
+            width: 100%
+    th 
+        border: none
+        padding-left: 0 !important
+        .head-title-wrapper
+            border-bottom: 3px solid $c-med-gris
+            width: 255px
+            @media(max-width:960px)
+                border: none
+            &.date, &.region, &.activity
+                width: 135px
+
+
+        .head-title 
+            width: 100%
+            position: relative
+            display: inline-block
+
+// Styles pour les titres des offres de stages       
+.title_offer_wrapper
+    display: flex
+    align-items: center
+    padding: 30px 0 
+    @media(max-width: 960px)
+        padding: 15px 0
+
+    .icon-box
+        width: 50px
+        height: 50px
+        border-radius: 12px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $c-rouge
+        position: relative
+        &::before
+            content: ""
+            width: 3px
+            height: 100%
+            background: $c-rouge
+            position: absolute
+            left: -24px
+            top: 0
+        @media(max-width: 1200px)
+            width: 25px
+            height: 25px
+            border-radius: 5px
+            align-self: flex-start
+
+        .mat-icon
+            color: $c-rouge-pale
+            @media(max-width:1200px)
+                font-size: 16px
+                height: 16px
+                width: 16px
+                    
+    .title-offer-content
+        margin-left: 8px
+        @media(max-width: 960px)
+            margin-right: 20px
+
+        .small-text
+            font-weight: bold !important
+            margin: 0 0 3px
+            @media(max-width: 960px)
+                font-size: 12px !important
+
+.mat-cell
+    @media(max-width: 960px)
+        font-size: 12px !important
+
+//Boutons d'actions du tableau pour la mise à jour, 
+//la vue ainsi que la suppressuion
+.actions__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    button
+        border: none
+        background: none
+    .actions__link
+        .mat-icon
+            color: $c-turquoise
+    .actions__link--maj
+        color: $c-iconMAJ-primaire
+    .actions__link--delete
+        color: $c-iconSupp
+

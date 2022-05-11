@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* Style global du projet */
+/** Importation de Bootstrap **/
+@import url(c:\Users\prode\Documents\GitHub\projet-synthese-final-1029\node_modules\bootstrap\dist\css\bootstrap.css);
+/* Couleurs des icônes d'action */
+/*** Import de la font Open Sans ***/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap");
+/** Déclaration des variables de polices **/
+body {
+  color: #707070;
+}
+
+h1 {
+  font: 600 44px/60px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font: 600 24px/28px "Open Sans";
+  }
+}
+
+h2 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+h3 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+p {
+  font: 300 16px/24px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  p {
+    font: 400 16px/20px "Open Sans";
+  }
+}
+/*# sourceMappingURL=ajout-demande-stage.component.css.map */

@@ -1,0 +1,71 @@
+<!-- <p>form-maj-candidat works!</p> -->
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-04-12 -->
+
+
+<!-- <h2>Formulaire de mise à jour du candidat</h2> -->
+
+
+<form (ngSubmit)="onSubmit()"> 
+
+  <div>
+    <button mat-raised-button id="btn__boutonMaj" style="float: right; " type="submit"><mat-icon>save</mat-icon>Mettre à jour</button>
+    <button mat-raised-button id="btn__boutonAnnuler" style="float: right; " (click)=" listesCandidat()"><mat-icon>cancel</mat-icon>annuler</button><br>
+
+  </div> 
+
+
+          <div class="entete">
+
+          <b>Candidat</b>
+          
+          <div><input type="text" id="name"  required [(ngModel)]="candidat.name" name="name"></div>
+          
+          <div><input type="text" id="jobtitle"  required [(ngModel)]="candidat.jobTitle" name="jobtitle"></div>
+          </div>
+
+          <div class="container">
+          <label for="description"><h4> Courte présentation</h4></label>
+          <textarea type="text" rows="10" cols="60" class="form-control" id="description"  required [(ngModel)]="candidat.description" name="description"></textarea>
+        
+
+         
+          <div class="container-info"> 
+          <label for="address"><b>Adresse: </b></label>
+          <input type="text" class="form-control" id="address"  required [(ngModel)]="candidat.address" name="address">
+        
+
+          
+          <label for="city"><b>Ville: </b></label>
+          <input type="text" class="form-control" id="city"  required [(ngModel)]="candidat.city" name="city" >
+       
+
+          <label for="province"><b>Province: </b></label>
+          <input type="text" class="form-control" id="province"  required [(ngModel)]="candidat.province" name="province" >
+       
+         
+          <label for="postalCode"><b>Code postal </b></label>
+          <input type="text" class="form-control" id="postalCode"  required [(ngModel)]="candidat.postalCode" name="postalCode">
+        </div>
+        
+          <div class="containerCordonnees">
+          <label for="phone"><b>Téléphone: </b></label>
+          <input type="text" class="form-control" id="phone"  required [(ngModel)]="candidat.phone" name="phone">
+        
+        
+          <label for="email"><b>Email: </b></label>
+          <input type="text" class="form-control" id="email"  required [(ngModel)]="candidat.email" name="email">
+          </div>
+        </div>
+          
+        <br>
+
+        <div>
+          <button mat-raised-button id="btn__boutonMaj" style="float: right; " type="submit"><mat-icon>save</mat-icon>Mettre à jour</button>
+          <button mat-raised-button id="btn__boutonAnnuler" style="float: right; " (click)=" listesCandidat()"><mat-icon>cancel</mat-icon>annuler</button><br>
+      </div> 
+      
+      </form>
+
+      
+      <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button><br>

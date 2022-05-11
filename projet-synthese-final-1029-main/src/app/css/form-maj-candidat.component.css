@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* Style global du projet */
+/** Importation de Bootstrap **/
+@import url(/Volumes/DonnéePerso/Github/projet-synthese-final-1029/node_modules/bootstrap/dist/css/bootstrap.css);
+/* Couleurs des icônes d'action */
+/*** Import de la font Open Sans ***/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap");
+/** Déclaration des variables de polices **/
+body {
+  color: #707070;
+}
+
+h1 {
+  font: 600 44px/60px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font: 600 24px/28px "Open Sans";
+  }
+}
+
+h2 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+h3 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+p {
+  font: 300 16px/24px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  p {
+    font: 400 16px/20px "Open Sans";
+  }
+}
+
+body {
+  color: #707070;
+}
+
+.entete {
+  border: none;
+  border-left: 0.50rem solid;
+  border-color: #86A9E6;
+  padding: 1rem;
+}
+
+.container-info {
+  width: 55%;
+}
+
+.containerCordonnees {
+  position: absolute;
+  right: 20px;
+  width: 40%;
+  top: 66%;
+  float: right;
+}
+
+#name {
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+}
+
+#jobtitle {
+  border: none;
+  background-color: #fff;
+  margin-top: 5%;
+  width: 25%;
+}
+
+label {
+  margin: 0.5rem;
+}
+
+b, h4 {
+  font-family: "Open Sans";
+}
+
+#btn__boutonMaj {
+  color: #fff;
+  background-color: #7F2987;
+}
+
+#btn__boutonAnnuler {
+  color: #5E5E5E;
+  background-color: #CBCBCB;
+}
+
+#btn__boutonMaj:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+#btn__boutonAnnuler:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}

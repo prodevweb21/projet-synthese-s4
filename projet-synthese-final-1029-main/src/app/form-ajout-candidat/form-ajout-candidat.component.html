@@ -1,0 +1,131 @@
+<!-- <p>form-ajout-candidat works!</p> -->
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-04-12 -->
+
+<!-- <app-navigation></app-navigation> -->
+
+
+<h2>Ajouter un candidat</h2>
+
+
+<form (ngSubmit)="onSubmit()">
+
+    <button id="btn__boutonAjoutCandidat" style="float: right; " matSuffix type="submit" mat-raised-button><mat-icon>save</mat-icon>Sauvegarder</button>
+    <button (click)=" listesCandidat()" id="btn__boutonCancelCandidat" style="float: right; " matSuffix type="cancel" mat-raised-button><mat-icon>cancel</mat-icon>Annuler</button>
+
+    
+    <br>
+
+   <div class="container">
+    <div class="nomPrenom"><label id="prenom" for="name">Nom et prénom:</label>
+    <mat-form-field appearance="fill" class="half-width">
+        <input name="name" [(ngModel)]="candidat.name" name="name" #name="ngModel" matInput required minlength="2" maxlength="100">
+        <mat-error *ngIf="name.invalid && (name.dirty || name.touched) && name.hasError('required')">Le nom est obligatoire.</mat-error>
+        <mat-error *ngIf="name.invalid && (name.dirty || name.touched) && name.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="name.invalid && (name.dirty || name.touched) && name.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+    </div>
+
+    <div><label id="job" for="name">Poste actuel: </label>
+    <mat-form-field appearance="fill" class="half-width">
+        <input name="jobTitle" [(ngModel)]="candidat.jobTitle" name="jobTitle" #jobTitle="ngModel" matInput required minlength="20" maxlength="20">
+        <mat-error *ngIf="jobTitle.invalid && (jobTitle.dirty || jobTitle.touched) && jobTitle.hasError('required')">Le titre du poste est obligatoire.</mat-error>
+        <!-- <mat-error *ngIf="jobTitle.invalid && (jobTitle.dirty || jobTitle.touched) && jobTitle.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error> -->
+        <mat-error *ngIf="jobTitle.invalid && (jobTitle.dirty || jobTitle.touched) && jobTitle.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+    </div>
+    </div>
+
+
+    <div class="container-fluid">
+        
+        <div><label id="name" for="name"><h2>Courte présentation</h2></label></div>
+        <mat-form-field appearance="fill" class="half-width">
+        <textarea class="presentation" matInput name="description" [(ngModel)]="candidat.description" name="description" #description="ngModel" matInput required cols="20px" rows="10px"></textarea>
+        <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('required')">La description est obligatoire.</mat-error>
+        <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+        
+    
+
+
+    <div class="container-info-perso">
+        <label id="name" for="name"><h5>Informations personnelles</h5></label>
+
+    <div><label id="adresse" for="name">Adresse</label></div>
+        <mat-form-field appearance="fill" class="half-widthInfo">
+            <input name="address" [(ngModel)]="candidat.address" name="address" #address="ngModel" matInput required minlength="2" maxlength="20">
+            <mat-error *ngIf="address.invalid && (address.dirty || address.touched) && address.hasError('required')">L'adresse est obligatoire.</mat-error>
+            <mat-error *ngIf="address.invalid && (address.dirty || address.touched) && address.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="address.invalid && (address.dirty || address.touched) && address.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+
+    <div><label id="ville" for="name">Ville</label></div>
+        <mat-form-field appearance="fill" class="half-widthInfo">
+            <input name="city" [(ngModel)]="candidat.city" name="city" #city="ngModel" matInput required minlength="2" maxlength="50">
+            <mat-error *ngIf="city.invalid && (city.dirty || city.touched) && city.hasError('required')">La ville est obligatoire.</mat-error>
+            <mat-error *ngIf="city.invalid && (city.dirty || city.touched) && city.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="city.invalid && (city.dirty || city.touched) && city.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+
+    <div><label id="province" for="name">Province</label></div>
+        <mat-form-field appearance="fill" class="half-widthInfo">
+            <input name="province" [(ngModel)]="candidat.province" name="province" #province="ngModel" matInput required minlength="2" maxlength="50">
+            <mat-error *ngIf="province.invalid && (province.dirty || province.touched) && province.hasError('required')">La province est obligatoire.</mat-error>
+            <mat-error *ngIf="province.invalid && (province.dirty || province.touched) && province.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="province.invalid && (province.dirty || province.touched) && province.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+
+    <div><label id="codePostale" for="name">code postale</label></div>
+        <mat-form-field appearance="fill" class="half-widthInfo">
+            <input name="postalCode" [(ngModel)]="candidat.postalCode" name="postalCode" #postalCode="ngModel" matInput required minlength="2" maxlength="50">
+            <mat-error *ngIf="postalCode.invalid && (postalCode.dirty || postalCode.touched) && postalCode.hasError('required')">Le code postal est obligatoire.</mat-error>
+            <mat-error *ngIf="postalCode.invalid && (postalCode.dirty || postalCode.touched) && postalCode.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="postalCode.invalid && (postalCode.dirty || postalCode.touched) && postalCode.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+    
+
+   
+        
+        
+
+
+        <div class="container-coordonnees">
+
+    <div><label id="email" for="name">Email</label></div>
+    
+        <mat-form-field appearance="fill" class="half-widthInfo">
+            <input name="email" [(ngModel)]="candidat.email" name="email" #email="ngModel" matInput required minlength="2" maxlength="50">
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched) && email.hasError('required')">L'adresse courriel est obligatoire.</mat-error>
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched) && email.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched) && email.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+
+    <div><label id="telephone" for="name">Téléphone</label></div>
+        <mat-form-field appearance="fill" class="half-widthInfo">
+            <input name="phone" [(ngModel)]="candidat.phone" name="phone" #phone="ngModel" matInput required minlength="2" maxlength="50">
+            <mat-error *ngIf="phone.invalid && (phone.dirty || phone.touched) && phone.hasError('required')">Le numéro de téléphone est obligatoire.</mat-error>
+            <mat-error *ngIf="phone.invalid && (phone.dirty || phone.touched) && phone.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="phone.invalid && (phone.dirty || phone.touched) && phone.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+    </div>
+    </div>
+    </div>  
+    <br>
+    <button id="btn__boutonAjoutCandidat" style="float: right; " matSuffix type="submit" mat-raised-button><mat-icon>save</mat-icon>Sauvegarder</button>
+    <button (click)=" listesCandidat()" id="btn__boutonCancelCandidat" style="float: right; " matSuffix type="cancel" mat-raised-button><mat-icon>cancel</mat-icon>Annuler</button>
+
+
+
+    <!-- Ce bouton permet de revenir à la liste générale de candidat -->
+
+    <button (click)=" listesCandidat()" id="btn__boutonCancelCandidat" style="float: left; ">Revenir à la liste des candidats</button><br>
+
+
+
+
+
+
+
+</form>

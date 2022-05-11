@@ -1,0 +1,45 @@
+@import '../../styles'
+@import '../../styles_mixin'
+
+
+
+.btn
+    &__button1
+        @include sidebar_button
+        border-color: $c-turquoise
+        color: $c-turquoise
+    &__button2
+        @include sidebar_button
+        border-color: $c-iconMAJ-primaire
+        color: $c-iconMAJ-primaire
+    &__button3
+        @include sidebar_button
+        border-color: $c-iconSupp
+        color: $c-iconSupp
+    &__button4
+        @include sidebar_button
+        border-color: $c-mauve
+        color: $c-mauve
+    &__button5
+        @include sidebar_button
+        border-color: $c-bleu
+        color: $c-bleu
+
+.btn__button1:hover
+    @include hover_button
+
+
+.btn__button2:hover
+    @include hover_button
+
+
+.btn__button3:hover
+    @include hover_button
+
+
+.btn__button4:hover
+    @include hover_button
+
+
+.btn__button5:hover
+    @include hover_button

@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* Style global du projet */
+/** Importation de Bootstrap **/
+@import url(c:\Users\prode\Documents\GitHub\projet-synthese-final-1029\node_modules\bootstrap\dist\css\bootstrap.css);
+/* Couleurs des icônes d'action */
+/*** Import de la font Open Sans ***/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap");
+/** Déclaration des variables de polices **/
+body {
+  color: #707070;
+}
+
+h1 {
+  font: 600 44px/60px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font: 600 24px/28px "Open Sans";
+  }
+}
+
+h2 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+h3 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+p {
+  font: 300 16px/24px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  p {
+    font: 400 16px/20px "Open Sans";
+  }
+}
+
+ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 50px;
+  list-style-type: none;
+  width: 85%;
+}
+
+li {
+  font-size: 60%;
+}
+
+#btn__button1 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #F26689;
+  color: #F26689;
+}
+
+#btn__button2 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #F89747;
+  color: #F89747;
+}
+
+#btn__button3 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #07A04A;
+  color: #07A04A;
+}
+
+#btn__button4 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #F26689;
+  color: #F26689;
+}
+
+#btn__button1:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+
+#btn__button2:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+
+#btn__button3:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+
+#btn__button4:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+/*# sourceMappingURL=navbar.component.css.map */

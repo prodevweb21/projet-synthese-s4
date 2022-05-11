@@ -1,0 +1,96 @@
+<!-- <p>fiche-candidat works!</p> -->
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-04-12 -->
+
+
+<!-- <h2>Fiche complète du candidat</h2> -->
+
+
+
+<button mat-raised-button class="btn btn-info" style="float: right; "  (click)="editCandidat(candidat._id)"><mat-icon>update</mat-icon></button>
+<button mat-raised-button class="btn btn-info" style="float: right; "  (click)="deleteCandidat(candidat._id)"><mat-icon>delete</mat-icon></button>
+<button mat-raised-button class="btn btn-info" style="float: right; "  (click)=" listesCandidat()"><mat-icon>cancel</mat-icon></button>
+
+
+
+
+<!-- action modal non fonctionnelle/en attente de test-->
+<!-- <button mat-raised-button class="btn btn-info" (click)="openDialog()"><b>Delete moi</b></button> -->
+
+<br>
+<br>
+
+
+<form *ngIf="candidat">
+
+          <div class="entete">
+          <b>Candidat</b>
+          <br>
+          <label><h3>{{candidat.name}}</h3></label>
+          <br>
+          <label class="jobTitle">{{candidat.jobTitle}}</label>
+          </div>
+          <br>
+          <br>
+
+          <div class="container-fluid">
+          <h2>Courte présentation</h2>
+          <label><p>{{candidat.description}}</p></label> 
+          
+
+          <br>
+          <h4>Informations personnelles</h4>
+
+
+              <div class="info">
+              <b>Adresse: </b></div>
+              <label><p>{{candidat.address}}</p></label>
+              
+            
+              <div class="info">
+              <b>Ville: </b></div>
+              <label><p>{{candidat.city}}</p></label>
+              
+
+              <div class="info">
+              <b>Province: </b></div>
+              <label><p>{{candidat.province}}</p></label>
+              
+
+
+              <div class="info">
+              <b>Code postal </b></div>
+              <label><p>{{candidat.postalCode}}</p></label>
+              
+
+              <div class="containerCordonnees">
+              <div class="info">
+              <b>Téléphone: </b></div>
+              <label><p>{{candidat.phone}}</p></label>
+              
+
+
+              <div class="info">
+              <b>Email: </b></div>
+              <label><p>{{candidat.email}}</p></label>
+            
+            </div>
+          </div>
+      </form>
+
+      <br>
+        <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button>
+
+
+    
+
+
+    
+    
+  
+  
+
+
+
+
+

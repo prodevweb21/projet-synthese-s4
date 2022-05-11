@@ -1,0 +1,36 @@
+<!-- Créer par Thomas Patenaude Poulin -->
+<!-- FONCTIONNEMENT : Le fait d'entrer les informations dans ce formulaire permet d'afficher le nom et prénom de l'utilisateur dans la barre de navigation verticale à l'intérieur de l'application. -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-c-blanc">
+  <a href="#"><img src="../../assets/logo.png" alt=""></a>
+</nav>
+
+<div class="container-fluid p-0 m-0">
+  <div class="row">
+    <div class="col-6 pe-5"><img class="mw-100 ml-n1" src="../assets/img/e-stage-accueil.jpg" alt="image"></div>
+    <div class="col-6 pt-5">
+			<h1 class="pt-5">Identification</h1>
+    <div class="row">
+      <div class="col-8">
+        <p class="mb-5 pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, tempore. Quam ea iusto voluptatem, voluptates laborum ut quo opti</p>
+        <form action="">
+          <div class="mb-4">
+            <input type="text" class="form-control border-c-turquoise rounded-0" id="nomEtPrenom" placeholder="Votre nom et prénom" #box (keyup)="getValue(box.value)">
+          </div>
+          <div class="mb-4">
+            <input type="email" class="form-control border-c-turquoise rounded-0" id="courriel" placeholder="Votre courriel">
+          </div>
+          <div class="mb-4">
+            <!-- Ici le routeur link renvoi à la page de connexion Il faut le garder comme tel et ne pas le renseigner -->
+            <input class="btn bg-c-turquoise c-blanc" type="button" (click)="ajoutNomEtPrenom(nomEtPrenom)" routerLink="/" value="Accéder maintenant">
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+

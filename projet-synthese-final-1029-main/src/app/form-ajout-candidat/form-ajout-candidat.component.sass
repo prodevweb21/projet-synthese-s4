@@ -1,0 +1,84 @@
+@import '../../styles'
+@import '../../styles_mixin'
+
+body
+    color: $c-med-gris
+
+   
+form
+    min-width: 150px
+    margin-left: 60px
+
+ 
+.container
+    display: grid
+
+.container-fluid
+    background-color: $c-blanc
+    
+
+label
+    margin-right: 2%
+
+mat-form
+    display: inline-flex
+
+  
+
+.half-width
+    width: 50%
+    margin-right: 5px
+
+.half-widthInfo
+    width: 50%
+    margin-right: 5px
+    border-left: solid
+
+p
+    color: $c-noir
+    font-family: $f-primaire
+
+
+h5, h2
+    color: $c-bleu
+    font-family: $f-primaire
+
+
+
+button
+    margin-bottom: 5%
+
+// disposition des cases relatives aux infos personnelles
+.container-coordonnees
+    position: absolute
+    right: 20px
+    width: 40%
+    top: 610px
+    float: right
+
+
+
+#btn
+    &__boutonAjoutCandidat
+        color: $c-blanc
+        background-color: $c-mauve
+    &__boutonCancelCandidat
+        color: $c-gris-fonce
+        background-color: $c-inactif 
+    
+
+#btn__boutonAjoutCandidat:hover
+    @include hover_button
+#btn__boutonCancelCandidat:hover
+    @include hover_button
+    
+    
+
+       
+
+
+
+
+
+
+

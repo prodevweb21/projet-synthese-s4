@@ -1,0 +1,53 @@
+@import '../../styles'
+@import '../../styles_mixin'
+
+body
+    color: $c-med-gris
+
+.entete
+    border: none
+    border-left: 0.50rem solid
+    border-color: $c-bleu
+    padding: 1rem
+    
+.container-info
+    width: 55%
+
+.containerCordonnees
+    position: absolute
+    right: 20px
+    width: 40%
+    top: 66%
+    float: right
+
+#name
+    border: none
+    background-color: transparent
+    font-size: 3rem
+
+#jobtitle
+    border: none
+    background-color: $c-blanc
+    margin-top: 5%
+    width: 25%
+    
+label
+    margin: 0.5rem
+
+b, h4
+    font-family: $f-primaire
+
+
+#btn
+    &__boutonMaj
+        color: $c-blanc
+        background-color: $c-mauve
+    &__boutonAnnuler
+        color: $c-gris-fonce
+        background-color: $c-inactif 
+    
+
+#btn__boutonMaj:hover
+    @include hover_button
+#btn__boutonAnnuler:hover
+    @include hover_button

@@ -1,0 +1,21 @@
+export interface DemandeStage {
+    _id: String,
+    title: String,
+    studentName: String,
+    studentPresentation: String,
+    school: String,
+    startDate: Date,
+    endDate: Date,
+    program: String,
+    stageType: String,
+    hoursPerWeek: Number,
+    additionalInfo: String,
+    published: Boolean,
+    paid: [String],
+    active: Boolean,
+    skills: [String],
+    region: String,
+    activitySector: String,
+    city: String,
+    linkToResume: String
+}

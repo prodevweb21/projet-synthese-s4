@@ -1,0 +1,37 @@
+/* Importation du style global */
+
+@import '../../styles'
+
+/** Déclaration des variables de couleurs **/
+
+$c-gris : #454545
+
+.mat-header-cell
+    color: $c-gris
+
+/*** Couleur de bouton ***/
+
+$couleurs: ("orange": orange, "gris": $c-gris, "blanc": white, "noir": black, "rouge": red)
+
+@each $couleur, $i in $couleurs
+    .couleurBtn__
+        &#{$couleur}
+            background-color: $i
+            color: white
+    .h1__
+        &#{$couleur}
+            color: $i
+            font-weight: bold
+    .bg__
+        &#{$couleur}
+            background-color: $i
+    .couleur__
+        &#{$couleur}
+            color: $i
+
+$icons: ("voir": $c-iconVue, "edit": $c-iconMAJ-primaire, "supp": $c-iconSupp)
+
+@each $icon, $i in $icons
+    .btn__
+        &#{$icon}
+            color: $i

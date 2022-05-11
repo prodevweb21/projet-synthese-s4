@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "styles_mixin.sass"
+    ],
+    "names": [],
+    "file": "styles_mixin.css"
+}

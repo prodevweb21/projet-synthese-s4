@@ -1,0 +1,99 @@
+@import '../../styles'
+
+/** Variables de couleurs du composant **/ 
+
+$c-med-mauve: #ad46b6
+$c-med-bleu: #4950ae
+
+
+/*** Style des cards ***/
+
+@mixin card    
+    color: white
+    padding-bottom: 15px
+    padding-top: 15px
+.feuille
+    @include card
+    background-color: $c-jaune
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+.millieu
+    @include card
+    background-color: $c-jaune
+
+.fin
+    @include card
+    background-color: $c-med-jaune
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+
+.paperPlane
+    @include card
+    background-color: $c-rouge
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+
+.millieu2
+    @include card
+    background-color: $c-rouge
+
+.fin2
+    @include card
+    background-color: $c-med-rouge
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+
+.user
+    @include card
+    background-color: $c-mauve
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+
+.user2
+    @include card
+    background-color: $c-mauve
+
+.millieu3
+    @include card
+    background-color: $c-med-mauve
+
+.millieu4
+    @include card
+    background-color: $c-med-bleu
+
+.fin3
+    @include card
+    background-color: $c-bleu
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+
+$couleurs: ("turquoise": $c-turquoise)
+
+@each $couleur, $i in $couleurs
+    .couleurBtn__
+        &#{$couleur}
+            background-color: $i
+            color: white
+            float: right
+.couleur__
+    &#{rouge}
+        color: $c-rouge
+    &#{btnRef}
+        background-color: rgba(255, 0, 0, 0.4) 
+        color: $c-fonce-rouge
+    &#{btnAccept}
+        background-color: rgba(108, 168, 124, 0.437)
+        color: rgb(12, 73, 28)
+h4
+    font-weight: bold
+
+$icons: ("voir": $c-iconVue, "edit": $c-iconMAJ-primaire, "supp": $c-iconSupp)
+
+@each $icon, $i in $icons
+    .btn__
+        &#{$icon}
+            color: $i
+
+.icone
+    font-size: 45px
+    

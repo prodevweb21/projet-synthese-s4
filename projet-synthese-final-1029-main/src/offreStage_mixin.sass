@@ -1,0 +1,164 @@
+
+// **** Styles globaux pour les offres de stages **** 
+// **** Par Émilie Stratford  
+// Je travaille surtout en flexbox et avec la méthode BEM.
+// Je n'appelle pas nécéssairement des mixins mais plutôt des class qui appliqueront directement le style.
+// https://writecode.fr/tutoriel/la-methode-bem-pour-le-css
+
+
+.small-text 
+    font: 400 14px/16px $f-primaire !important
+    
+.offer-view
+    padding: 186px 30px
+    background: $c-bg-page
+    @media(max-width: 1024px)
+        padding: 120px 30px
+
+    &__headContent
+        padding: 0px 20px
+        color: $c-med-gris
+        border-left: 10px solid $c-rouge
+        margin-bottom: 60px
+
+    &__details-wrapper
+        background: $c-blanc
+        padding: 61px 74px
+        @media(max-width:1024px)
+            padding: 60px 30px           
+
+    &__enterprise
+        background: $c-blanc
+        max-width: 40%
+        font: 600 28px/38px $f-primaire !important
+        @media(max-width: 1024px)
+            font: 600 20px/22px $f-primaire !important
+            max-width: 100%
+            
+.offer__wrapper 
+    max-width: 1317px
+    margin: 0 auto
+
+.offer-border
+    border-left: 10px solid $c-med-gris
+    padding-left: 8px
+    @media(max-width:1024px)
+        border-left: 3px solid $c-med-gris
+
+.red-med-title
+    font: 600 24px/33px $f-primaire
+    color: $c-med-rouge
+    margin: 75px 0 55px
+    @media(max-width: 1024px)
+        margin: 30px 0
+.details__title 
+    font: 600 44px/60px $f-primaire !important
+    color: $c-med-rouge
+    padding-bottom: 40px
+    @media(max-width: 767px)
+        font: 600 24px/28px $f-primaire !important
+         padding-bottom: 20px
+.infos__wrapper
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            max-width: 797px
+            @media(max-width: 767px)
+                flex-direction: column
+
+
+// Style pour l'ajout & la mise à jour
+
+.offre-submitBtn
+    display: flex
+    justify-content: flex-end
+    margin-top: 60px
+    &.up
+        margin: 0px 0 40px 0
+
+    button
+        padding: 15px
+        border: 1px solid $c-input-color
+        font-size: 20px
+        background: $c-blanc
+        margin-right: 20px
+        border-radius: 5px
+        color: $c-input-color
+        transition: 0.3s
+        @media(max-width:767px)
+            font-size: 16px
+            padding: 10px
+        &:hover
+            background: $c-input-color
+            color: $c-blanc
+        &:last-of-type
+            border: none
+            background: $c-med-rouge
+            margin-right: 0
+            color: $c-blanc
+            transition: 0.3s
+            font-weight: bold
+            display: flex
+            align-items: center
+            .mat-icon
+                font-size: 24px
+                margin-right: 4px
+            &:hover
+                background: $c-fonce-rouge
+
+
+form
+    display: flex
+    flex-direction: column
+
+    textarea
+        width: 100%
+        border: none
+        border: 1px solid $c-gris-pale
+        padding: 40px 15px
+        color: $c-input-color
+        font-size: 24px
+        font-weight: 300
+        max-height: 190px
+        @media(max-width: 767px)
+            font-size: 16px
+
+    input[type="text"], input[type="select"], input[type="date"], select
+        width: 522px
+        padding: 25px 20px 
+        border: 1px solid $c-gris-pale
+        color: $c-input-color
+        font-size: 24px
+        font-weight: 300
+        background: white
+        @media(max-width: 767px)
+            width: 320px
+            font-size: 16px
+        @media(max-width: 420px)
+            width: 200px
+    label
+        font-size: 24px
+        color: $c-input-color
+        font-weight: 300
+        @media(max-width: 767px)
+            font-size: 16px
+    
+    .infos__wrapper
+        max-width: 100%
+        @media(max-width:1300px)
+            flex-direction: column
+
+        .mat-form-field 
+            width: 50%
+            @media(max-width:767px)
+                width: 100%
+    .offer-checkbox
+        display: flex
+        flex-direction: column
+        &-item
+            display: flex
+            justify-content: flex-start
+            padding-bottom: 30px
+
+            input
+                margin-right: 15px

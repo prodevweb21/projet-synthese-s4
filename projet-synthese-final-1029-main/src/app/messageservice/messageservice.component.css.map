@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "messageservice.component.sass"
+    ],
+    "names": [],
+    "file": "messageservice.component.css"
+}

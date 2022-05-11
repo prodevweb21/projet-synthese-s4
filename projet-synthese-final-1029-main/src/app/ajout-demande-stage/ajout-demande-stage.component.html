@@ -1,0 +1,172 @@
+<!-- ajout-demande-stage.component.html -->
+<!-- Programmé par : Maxime Lacroix-Lemire -->
+<!-- Dernière Mise À  Jour :  2022/04/09 -->
+
+<!-- ajout de la barre de navigation RZ -->
+<!-- <app-navigation></app-navigation> -->
+
+
+<ng-container *ngIf="demande">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-12">
+                <h3>{{titre}}</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Début du formulaire-->        
+    <form class="pt-5" #demandeAjoutForm="ngForm">
+        <!-- Bouton d'action du haut du formulaire -->
+        <div class="pr-5 float-right">
+            <button type="reset" class="btn btn-secondary mr-3" (click)="goBack()">Annuler</button>
+            <button type="submit" class="btn btn-primary"><mat-icon class="mr-1" (click)="onSave(demandeAjoutForm)">save</mat-icon> Sauvegarder </button>
+        </div>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label class="pr-3" for="titre">Titre : </label>
+                    <input type="text" name="titre" size="40">
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="candidat">Nom et prénom</label><br>
+                    <input type="text" name="candidat" size="100">
+                </div>
+            </div>
+        </div>
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="presentation">Présentation</label><br>
+                    <textarea type="text" name="presentation" cols="100" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="programme">Programme de formation</label><br>
+                    <input type="text" id="programme" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" required>
+                </div>
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="ecole">Établissement scolaire</label><br>
+                    <input type="text" id="ecole" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" required>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="secteurActivite">Secteur d'activité</label><br>
+                    <select name="secteurActivite" id="secteurActivite" required>
+                        <option selected>Veuillez effectuer un choix</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="ville">Ville</label><br>
+                    <input type="text" id="ville" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" required>
+                </div>
+            </div>
+        </div>               
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="region">Region</label><br>
+                    <select name="region" id="region" required>
+                        <option selected>Veuillez effectuer un choix</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="competence">Compétence</label><br>
+                    <textarea type="text" name="competence" cols="100" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h6>Information sur le stage recherché</h6>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="typeStage">Type de stage</label><br>
+                    <select name="typeStage" id="typeStage" required>
+                        <option selected>Veuillez effectuer un choix</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>                            
+                </div>
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="dateDebut">Date de début</label><br>
+                    <input type="date" id="dateDebut" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="langage">Nombre d'heure par semaine</label><br>
+                    <select name="langage" id="langage" required>
+                        <option selected>Veuillez effectuer un choix</option>
+                        <option>25 heures</option>
+                        <option>35 heures</option>
+                    </select>                            
+                </div>
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="dateFin">Date de fin</label><br>
+                    <input type="date" id="dateFin" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <h6 class="pb-2">Rémunération</h6>
+                    <input class="mr-3" type="checkbox" id="choixEntreprise" placeholder="" required>
+                    <label for="choixEntreprise">À la discrétion de l'entreprise</label><br>
+                    <input class="mr-3" type="checkbox" id="remunere" placeholder="" required>
+                    <label for="remunere">Stage rémunéré</label><br>
+                    <input class="mr-3" type="checkbox" id="nonRemunere" placeholder="" required>
+                    <label for="nonRemunere">Stage non rémunéré</label><br>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 form-group">
+                    <label for="infoSupp">Information supplémentaires</label><br>
+                    <textarea type="text" name="infoSupp" cols="100" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="container float-right pb-5">
+            <div class="row">                
+                <div class="col-12 form-group">
+                    <input type="text" id="upFichier" disabled="disabled">
+                    <input type="file" name="cv" id="cv" required>
+                </div>
+            </div>
+        </div>        
+        <div class="pt-4 pb-5 pr-5 float-right">
+            <button type="reset" class="btn btn-secondary mr-3">Annuler</button>
+            <button type="submit" class="btn btn-primary"><mat-icon class="mr-1">save</mat-icon> Sauvegarder </button>
+        </div>
+    </form>
+</ng-container>

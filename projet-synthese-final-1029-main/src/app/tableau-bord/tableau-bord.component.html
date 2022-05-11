@@ -1,0 +1,120 @@
+<!-- tableau-bord.component.html -->
+<!-- Programmé par : Maxime Lacroix-Lemire -->
+<!-- Dernière Mise À  Jour :  2022/04/12 -->
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2 feuille">
+                        <fa-icon [icon]="feuille"></fa-icon>
+                    </div>
+                    <div class="col-8 millieu">
+                        <p>Demandes de stage</p>
+                        <p nbrDemandeStages()></p>
+                    </div>
+                    <div class="col-2 fin"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2 paperPlane">
+                    <fa-icon [icon]="paperPlane"></fa-icon>
+                    </div>
+                    <div class="col-8 millieu2">
+                    <p>Offres de stage</p>
+                    </div>
+                    <div class="col-2 fin2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2 user">
+                        <fa-icon [icon]="user"></fa-icon>
+                    </div>
+                    <div class="col-3 user2">
+                        <p>Candidats</p>
+                    </div>
+                    <div class="col-1 millieu3"></div>
+                    <div class="col-1 millieu4"></div>
+                    <div class="col-5 fin3">
+                        <p>Candidats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-12 pt-5">
+    <h4>Dernières <span class="couleur__rouge">demandes</span> de stage</h4>
+    <p class="couleur__rouge">En attente de validation</p>        
+    <button class="btn couleurBtn__turquoise">{{ btnValid }}</button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Poste</th>
+        <th scope="col">Région</th>
+        <th scope="col">Date</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let demandeStage of tableauDemandeStages">
+            <th scope="row">
+                <fa-icon class="icone" [icon]="ligne" transform="rotate-90"></fa-icon>
+                <fa-icon class="icone" [icon]="graduation" ></fa-icon>
+                {{demandeStage.title}}
+            </th>
+            <td>{{ demandeStage.region}}</td>
+            <td>{{ demandeStage.startDate | date : 'yyyy-MM-dd' }}</td>
+            <td>
+                <button class="btn couleur__btnRef">Refusé</button>
+                <button class="btn couleur__btnAccept">Accepté</button>
+                <button class="btn btn__voir" routerLink="/voirDemande/{{demandeStage._id}}"><fa-icon [icon]="voir"></fa-icon></button>
+                <button class="btn btn__edit" routerLink="/modifDemande/{{demandeStage._id}}"><fa-icon [icon]="modifier"></fa-icon></button>
+                <button class="btn btn__supp"><fa-icon [icon]="suppression"></fa-icon></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="pt-5">
+    <h4>Dernières <span class="couleur__rouge">offres</span> de stage</h4>
+    <p class="couleur__rouge">En attente de validation</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Poste</th>
+                <th scope="col">Région</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let offreStage of tableauOffrestage">
+                <th scope="row">
+                    <fa-icon class="icone" [icon]="ligne" transform="rotate-90"></fa-icon>
+                    <fa-icon class="icone" [icon]="graduation" ></fa-icon>
+                    {{offreStage.title}}
+                </th>
+                <td>{{ offreStage.region}}</td>
+                <td>{{ offreStage.startDate | date : 'yyyy-MM-dd' }}</td>
+                <td>
+                    <button class="btn couleur__btnRef ">Refusé</button>
+                    <button class="btn couleur__btnAccept">Accepté</button>
+                    <button class="btn btn__voir" routerLink="/voirDemande/{{offreStage._id}}"><fa-icon [icon]="voir"></fa-icon></button>
+                    <button class="btn btn__edit" routerLink="/modifDemande/{{offreStage._id}}"><fa-icon [icon]="modifier"></fa-icon></button>
+                    <button class="btn btn__supp"><fa-icon [icon]="suppression"></fa-icon></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

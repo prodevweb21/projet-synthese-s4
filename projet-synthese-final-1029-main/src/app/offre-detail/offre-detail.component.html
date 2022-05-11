@@ -1,0 +1,62 @@
+<ng-container *ngIf="offre">
+  <div class="offer-view">
+    <div class="offer__wrapper">
+      <div class="offer-view__headContent">
+        <span>Offre de stage</span>
+        <h1 class="offer-view__title">{{ offre.title }}</h1>
+        <p class="offer-view__enterprise">{{ offre.enterprise }}</p>
+      </div>
+      <div class="offer-view__actions">
+        <!-- Permettra de retourner à la liste des offres de stages -->
+        <mat-icon (click)="goBack()">done</mat-icon>
+        <!-- Permettra d'accèder au formulaire de mise à jour de l'offre de stage -->
+        <mat-icon routerLink="/maj-offre/{{ offre._id }}">edit</mat-icon>
+        <!-- Permettra de supprimer l'offre de stage -->
+        <mat-icon (click)="goBack()">close</mat-icon>
+      </div>
+      <div class="offer-view__details-wrapper">
+        <h2 class="details__title">Description de la tâche</h2>
+        <p>{{ offre.description }}</p>
+        <div class="offer-view__skills">
+          <div class="offer-border">
+            <h3>Formation demandées</h3>
+            <p>{{ offre.skills }}</p>
+          </div>
+          <div class="offer-border">
+            <h3>Exigences</h3>
+            <p>{{ offre.requirements }}</p>
+          </div>
+        </div>
+        <div class="offer-view__infos">
+          <h3 class="red-med-title">Informations sur le stage</h3>
+          <div class="infos__wrapper">
+            <div class="offer-border">
+              <h3>Type de stage</h3>
+              {{ offre.stageType }}
+            </div>
+            <div class="offer-border">
+              <h3>Date de début</h3>
+              {{ offre.startDate }}
+            </div>
+            <div class="offer-border">
+              <h3>Nombre d'heure par semaine</h3>
+              {{ offre.hoursPerWeek }}
+            </div>
+            <div class="offer-border">
+              <h3>Date de fin</h3>
+              {{ offre.endDate }}
+            </div>
+            <div class="offer-border">
+              <h3>Rémunération</h3>
+              {{ offre.paid }}
+            </div>
+          </div>
+          <h3 class="red-med-title">Informations supplémentaires</h3>
+          <p>{{ offre.additionalInfo }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<button type="button" (click)="goBack()">go back</button>

@@ -1,0 +1,62 @@
+<!-- table-demande-stage.component.html -->
+<!-- Programmé par : Maxime Lacroix-Lemire -->
+<!-- Dernière Mise À  Jour :  2022/04/09 -->
+
+<div class="container-fluid p-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{titre}}</h1>
+            <a routerLink="/ajoutDemande" mat-button class="couleurBtn__orange btn mb-5 mt-5">Ajouter une demande</a>
+            <i class="fa-solid fa-graduation-cap"></i>
+            <table class="bg__blanc" mat-table #tableStage [dataSource]="tableauDemandeStages">
+                <ng-container matColumnDef="icones">
+                    <th mat-header-cell *matHeaderCellDef> Poste </th>
+                    <td mat-cell *matCellDef="let demandestages" [ngClass]="{'couleur__orange': demandestages.published === true, 'couleur__gris': demandestages.published === false}">
+                        <fa-icon [icon]="ligne" transform="rotate-90"></fa-icon>
+                        <fa-icon [icon]="graduation" ></fa-icon>
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="title">
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef></th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages">
+                        <span [ngClass]="{'couleur__rouge': demandestages.published === false}">
+                        {{demandestages.title}}
+                        </span>                        
+                        <br>
+                        {{demandestages.studentName}}
+                    </td>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages">
+                        
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="activitySector">
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Secteur d'activité </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.activitySector}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="region">
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Région </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.region}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="startDate">
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Date d'inscription </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.startDate | date : 'yyyy-MM-dd'}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let demandestages of tableauDemandeStages" class="boutonsAction">
+                        <button class="btn btn__voir" routerLink="/voirDemande/{{demandestages._id}}"><fa-icon [icon]="voir"></fa-icon></button>
+                        <button class="btn btn__edit" routerLink="/modifDemande/{{demandestages._id}}"><fa-icon [icon]="modifier"></fa-icon></button>
+                        <button class="btn btn__supp"><fa-icon [icon]="suppression"></fa-icon></button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+            </table>
+        </div>
+    </div>
+</div>

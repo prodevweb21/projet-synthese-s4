@@ -1,0 +1,34 @@
+// *** Fait par Émilie Stratford ***
+// Feuille de style qui prend en charge la vue détaillée des offres de stages 
+// Flexbox
+    
+@import '../../styles'
+@import '../../offreStage_mixin'
+
+.offer-view
+
+    &__actions
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin-block-end: 30px
+    .mat-icon
+        font-size: 30px
+        margin-left: 30px
+        color: $c-iconCheck
+        &:nth-of-type(2)
+            color: $c-iconMAJ-secondaire
+        &:nth-of-type(3)
+            color: $c-med-rouge
+
+    &__skills
+        margin-top: 85px
+        >div
+            margin-top: 36px
+        h3
+            margin-bottom: 8px
+    &__infos
+        .offer-border
+            margin: 0 30px 35px 0
+            @media(max-width: 1024px)
+                margin: 0 16px 35px 0

@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* Style global du projet */
+/** Importation de Bootstrap **/
+@import url(c:\Users\prode\Documents\GitHub\projet-synthese-final-1029\node_modules\bootstrap\dist\css\bootstrap.css);
+/* Couleurs des icônes d'action */
+/*** Import de la font Open Sans ***/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap");
+/** Déclaration des variables de polices **/
+body {
+  color: #707070;
+}
+
+h1 {
+  font: 600 44px/60px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font: 600 24px/28px "Open Sans";
+  }
+}
+
+h2 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+h3 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+p {
+  font: 300 16px/24px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  p {
+    font: 400 16px/20px "Open Sans";
+  }
+}
+
+body {
+  color: #707070;
+}
+
+form {
+  min-width: 150px;
+  margin-left: 60px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.container-fluid {
+  background-color: #fff;
+}
+
+label {
+  margin-right: 2%;
+}
+
+mat-form {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.half-width {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.half-widthInfo {
+  width: 50%;
+  margin-right: 5px;
+  border-left: solid;
+}
+
+p {
+  color: #000000;
+  font-family: "Open Sans";
+}
+
+h5, h2 {
+  color: #86A9E6;
+  font-family: "Open Sans";
+}
+
+button {
+  margin-bottom: 5%;
+}
+
+.container-coordonnees {
+  position: absolute;
+  right: 20px;
+  width: 40%;
+  top: 610px;
+  float: right;
+}
+
+#btn__boutonAjoutCandidat {
+  color: #fff;
+  background-color: #7F2987;
+}
+
+#btn__boutonCancelCandidat {
+  color: #5E5E5E;
+  background-color: #CBCBCB;
+}
+
+#btn__boutonAjoutCandidat:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+
+#btn__boutonCancelCandidat:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+/*# sourceMappingURL=form-ajout-candidat.component.css.map */

@@ -1,0 +1,554 @@
+@charset "UTF-8";
+/* Style global du projet */
+/** Importation de Bootstrap **/
+@import url(c:\Users\prode\Documents\GitHub\projet-synthese-final-1029\node_modules\bootstrap\dist\css\bootstrap.css);
+/* Couleurs des icônes d'action */
+/*** Import de la font Open Sans ***/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap");
+/** Déclaration des variables de polices **/
+body {
+  color: #707070;
+}
+
+h1 {
+  font: 600 44px/60px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font: 600 24px/28px "Open Sans";
+  }
+}
+
+h2 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+h3 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+p {
+  font: 300 16px/24px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  p {
+    font: 400 16px/20px "Open Sans";
+  }
+}
+
+.small-text {
+  font: 400 14px/16px "Open Sans" !important;
+}
+
+.offer-view {
+  padding: 186px 30px;
+  background: #F6F6F6;
+}
+
+@media (max-width: 1024px) {
+  .offer-view {
+    padding: 120px 30px;
+  }
+}
+
+.offer-view__headContent {
+  padding: 0px 20px;
+  color: #707070;
+  border-left: 10px solid #BB2026;
+  margin-bottom: 60px;
+}
+
+.offer-view__details-wrapper {
+  background: #fff;
+  padding: 61px 74px;
+}
+
+@media (max-width: 1024px) {
+  .offer-view__details-wrapper {
+    padding: 60px 30px;
+  }
+}
+
+.offer-view__enterprise {
+  background: #fff;
+  max-width: 40%;
+  font: 600 28px/38px "Open Sans" !important;
+}
+
+@media (max-width: 1024px) {
+  .offer-view__enterprise {
+    font: 600 20px/22px "Open Sans" !important;
+    max-width: 100%;
+  }
+}
+
+.offer__wrapper {
+  max-width: 1317px;
+  margin: 0 auto;
+}
+
+.offer-border {
+  border-left: 10px solid #707070;
+  padding-left: 8px;
+}
+
+@media (max-width: 1024px) {
+  .offer-border {
+    border-left: 3px solid #707070;
+  }
+}
+
+.red-med-title {
+  font: 600 24px/33px "Open Sans";
+  color: #A00707;
+  margin: 75px 0 55px;
+}
+
+@media (max-width: 1024px) {
+  .red-med-title {
+    margin: 30px 0;
+  }
+}
+
+.details__title {
+  font: 600 44px/60px "Open Sans" !important;
+  color: #A00707;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .details__title {
+    font: 600 24px/28px "Open Sans" !important;
+    font-padding-bottom: 20px;
+  }
+}
+
+.infos__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 797px;
+}
+
+@media (max-width: 767px) {
+  .infos__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.offre-submitBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 60px;
+}
+
+.offre-submitBtn.up {
+  margin: 0px 0 40px 0;
+}
+
+.offre-submitBtn button {
+  padding: 15px;
+  border: 1px solid #8A8A8A;
+  font-size: 20px;
+  background: #fff;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: #8A8A8A;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .offre-submitBtn button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+.offre-submitBtn button:hover {
+  background: #8A8A8A;
+  color: #fff;
+}
+
+.offre-submitBtn button:last-of-type {
+  border: none;
+  background: #A00707;
+  margin-right: 0;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offre-submitBtn button:last-of-type .mat-icon {
+  font-size: 24px;
+  margin-right: 4px;
+}
+
+.offre-submitBtn button:last-of-type:hover {
+  background: #821519;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form textarea {
+  width: 100%;
+  border: none;
+  border: 1px solid #EEEEEE;
+  padding: 40px 15px;
+  color: #8A8A8A;
+  font-size: 24px;
+  font-weight: 300;
+  max-height: 190px;
+}
+
+@media (max-width: 767px) {
+  form textarea {
+    font-size: 16px;
+  }
+}
+
+form input[type="text"], form input[type="select"], form input[type="date"], form select {
+  width: 522px;
+  padding: 25px 20px;
+  border: 1px solid #EEEEEE;
+  color: #8A8A8A;
+  font-size: 24px;
+  font-weight: 300;
+  background: white;
+}
+
+@media (max-width: 767px) {
+  form input[type="text"], form input[type="select"], form input[type="date"], form select {
+    width: 320px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  form input[type="text"], form input[type="select"], form input[type="date"], form select {
+    width: 200px;
+  }
+}
+
+form label {
+  font-size: 24px;
+  color: #8A8A8A;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  form label {
+    font-size: 16px;
+  }
+}
+
+form .infos__wrapper {
+  max-width: 100%;
+}
+
+@media (max-width: 1300px) {
+  form .infos__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+form .infos__wrapper .mat-form-field {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  form .infos__wrapper .mat-form-field {
+    width: 100%;
+  }
+}
+
+form .offer-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .offer-checkbox-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+form .offer-checkbox-item input {
+  margin-right: 15px;
+}
+
+.liste-offre-stage {
+  padding: 83px 164px;
+  background: #F6F6F6;
+}
+
+@media (max-width: 1200px) {
+  .liste-offre-stage {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 599px) {
+  .liste-offre-stage {
+    padding: 60px 16px;
+  }
+}
+
+.liste-offre-stage h1 {
+  color: #707070;
+}
+
+.liste-offre-stage .btnAction {
+  display: inline-block;
+  padding: 15px;
+  background: #BB2026;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 70px 0 16px 0;
+}
+
+@media (max-width: 960px) {
+  .liste-offre-stage .btnAction {
+    margin: 30px 0 16px 0;
+    padding: 10px;
+  }
+}
+
+.liste-offre-stage .btnAction:hover {
+  background: #A00707;
+}
+
+@media (min-width: 901px) {
+  .liste-offre-stage .notice_MB {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .liste-offre-stage .notice_MB {
+    display: block;
+  }
+}
+
+.liste-offre-stage__items {
+  padding: 135px 80px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .liste-offre-stage__items {
+    padding: 30px;
+    overflow-x: scroll;
+  }
+}
+
+.liste-offre-stage__items .items-table {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+}
+
+.liste-offre-stage th {
+  border: none;
+  padding-left: 0 !important;
+}
+
+.liste-offre-stage th .head-title-wrapper {
+  border-bottom: 3px solid #707070;
+  width: 255px;
+}
+
+@media (max-width: 960px) {
+  .liste-offre-stage th .head-title-wrapper {
+    border: none;
+  }
+}
+
+.liste-offre-stage th .head-title-wrapper.date, .liste-offre-stage th .head-title-wrapper.region, .liste-offre-stage th .head-title-wrapper.activity {
+  width: 135px;
+}
+
+.liste-offre-stage th .head-title {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.title_offer_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+@media (max-width: 960px) {
+  .title_offer_wrapper {
+    padding: 15px 0;
+  }
+}
+
+.title_offer_wrapper .icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #BB2026;
+  position: relative;
+}
+
+.title_offer_wrapper .icon-box::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #BB2026;
+  position: absolute;
+  left: -24px;
+  top: 0;
+}
+
+@media (max-width: 1200px) {
+  .title_offer_wrapper .icon-box {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.title_offer_wrapper .icon-box .mat-icon {
+  color: #FF9FA3;
+}
+
+@media (max-width: 1200px) {
+  .title_offer_wrapper .icon-box .mat-icon {
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.title_offer_wrapper .title-offer-content {
+  margin-left: 8px;
+}
+
+@media (max-width: 960px) {
+  .title_offer_wrapper .title-offer-content {
+    margin-right: 20px;
+  }
+}
+
+.title_offer_wrapper .title-offer-content .small-text {
+  font-weight: bold !important;
+  margin: 0 0 3px;
+}
+
+@media (max-width: 960px) {
+  .title_offer_wrapper .title-offer-content .small-text {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .mat-cell {
+    font-size: 12px !important;
+  }
+}
+
+.actions__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.actions__wrapper button {
+  border: none;
+  background: none;
+}
+
+.actions__wrapper .actions__link .mat-icon {
+  color: #089DA4;
+}
+
+.actions__wrapper .actions__link--maj {
+  color: #F89747;
+}
+
+.actions__wrapper .actions__link--delete {
+  color: #F26689;
+}
+/*# sourceMappingURL=liste-offres-stages.component.css.map */

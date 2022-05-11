@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* Style global du projet */
+/** Importation de Bootstrap **/
+@import url(/Volumes/DonnéePerso/Github/projet-synthese-final-1029/node_modules/bootstrap/dist/css/bootstrap.css);
+/* Couleurs des icônes d'action */
+/*** Import de la font Open Sans ***/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap");
+/** Déclaration des variables de polices **/
+body {
+  color: #707070;
+}
+
+h1 {
+  font: 600 44px/60px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font: 600 24px/28px "Open Sans";
+  }
+}
+
+h2 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+h3 {
+  font: 600 24px/30px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font: 600 20px/24px "Open Sans";
+  }
+}
+
+p {
+  font: 300 16px/24px "Open Sans";
+}
+
+@media (max-width: 767px) {
+  p {
+    font: 400 16px/20px "Open Sans";
+  }
+}
+
+/** Variables de couleurs du composant **/
+/*** Style des cards ***/
+.feuille {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #cd9635;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.millieu {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #cd9635;
+}
+
+.fin {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #986D22;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.paperPlane {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #BB2026;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.millieu2 {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #BB2026;
+}
+
+.fin2 {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #A00707;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.user {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #7F2987;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.user2 {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #7F2987;
+}
+
+.millieu3 {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #ad46b6;
+}
+
+.millieu4 {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #4950ae;
+}
+
+.fin3 {
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: #86A9E6;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.couleurBtn__turquoise {
+  background-color: #089DA4;
+  color: white;
+  float: right;
+}
+
+.couleur__rouge {
+  color: #BB2026;
+}
+
+.couleur__btnRef {
+  background-color: rgba(255, 0, 0, 0.4);
+  color: #821519;
+}
+
+.couleur__btnAccept {
+  background-color: rgba(108, 168, 124, 0.437);
+  color: #0c491c;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.btn__voir {
+  color: #22A6AC;
+}
+
+.btn__edit {
+  color: #F89747;
+}
+
+.btn__supp {
+  color: #F26689;
+}
+
+.icone {
+  font-size: 45px;
+}

@@ -1,0 +1,38 @@
+
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-04-12 -->
+
+
+
+
+<h2>Candidats</h2>
+<!-- Ceci est le bouton pour ajouter un candidat -->
+<div><button mat-raised-button class="btn__button4" (click)="addCandidat()"> + Ajouter un candidat</button></div>
+
+<!-- Ceci est la carte unique qui renvoie toute l'onformaton des candidats grâce au *ngFor -->
+    <ng-container class="container-fluid" *ngFor="let candidat of candidats">
+     
+  <mat-card class="liste-card" (click)="candidatDetails(candidat._id)">
+
+    <mat-card-title>
+      <mat-icon>person</mat-icon>
+    </mat-card-title>
+
+    <mat-card-content>
+    <dl> 
+      <dt>{{candidat.name}}</dt>
+      <dt>{{candidat.jobTitle}}</dt>
+      <dt>{{candidat.email}}</dt>
+      <dt>{{candidat.phone}}</dt>
+    </dl>
+    </mat-card-content>
+
+ 
+</mat-card>
+</ng-container>
+
+
+
+
+
+

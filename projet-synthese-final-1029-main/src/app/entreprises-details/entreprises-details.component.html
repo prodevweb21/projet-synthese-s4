@@ -1,0 +1,91 @@
+<div class="container pt-5">
+
+  <div class="row pt-5">
+    <div class=" col-4 col-lg-2 border-r-c-bleu">
+      <img class="img-fluid pe-5" src="../../assets/img/entreprises.png" alt="">
+    </div>
+    <div class="col-4">
+      <h4>Entreprise</h4>
+      <h1>{{ entreprise.name }}</h1>
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-1 d-flex justify-content-end">
+      <h1 class="d-inline-flex pb-5">
+
+        <!-- Retour à entreprise -->
+        <mat-icon class="icon icon-check mx-4" (click)="redirigerVersEntreprise()">check</mat-icon>
+
+        <!-- Modifier une entreprise -->
+        <mat-icon class="icon icon-create mx-4" (click)="redirigerVersMajEntreprise()">create</mat-icon>
+
+        <!-- Supprimer une entreprise , ouvre un modal pour confirmer la suppression . -->
+        <mat-icon class="icon icon-cancel_presentation mx-4" (click)="supprimerEntreprise(entreprise._id)"> cancel_presentation</mat-icon>
+
+
+      </h1>
+  </div>
+</div>
+
+  <div class="rounded p-5 bg-c-blanc">
+    <div class="row">
+      <div class="col-12 pb-4">
+        <h1 class="f-c-bleu">Courte présentation</h1>
+      </div>
+    <div class="row">
+      <div class="col-12 py-4">
+        <p>{{ entreprise.description }}</p>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col-12">
+        <h3 class="f-c-bleu">Personne contact</h3>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col-12">
+        <h2>{{ entreprise.contactName }}</h2>
+      </div>
+    </div>
+<div class="row py-3">
+  <div class="col-12">
+    <h3 class="f-c-bleu">Information de contact</h3>
+  </div>
+</div>
+
+    <div class="row">
+      <div class="col-12 m-3 col-md-5 border-l-c-med-gris">
+        <h4>Adresse</h4>
+        <p>{{ entreprise.address }}</p>
+      </div>
+      <div class="col-12 my-3 col-md-5 border-l-c-med-gris ms-3">
+        <h4>Téléphone</h4>
+        <p>{{ entreprise.contactPhone }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 m-3 col-md-5 border-l-c-med-gris">
+        <h4>Ville</h4>
+        <p>{{ entreprise.city }}</p>
+      </div>
+      <div class="col-12 m-3 col-md-5 border-l-c-med-gris ms-3">
+        <h4>Courriel</h4>
+        <p>{{ entreprise.contactEmail }}</p>
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col-12 border-l-c-med-gris ms-3">
+        <h4>Province</h4>
+        <p>{{ entreprise.province }}</p>
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col-12 border-l-c-med-gris ms-3">
+        <h4>Code postal</h4>
+        <p>{{ entreprise.postalCode }}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

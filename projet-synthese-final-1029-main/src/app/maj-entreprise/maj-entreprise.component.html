@@ -1,0 +1,154 @@
+<main>
+  <div class="container">
+     <div class="py-5">
+        <h1 class="ps-2 border-l-c-bleu f-c-med-gris">Ajouter une entreprise</h1>
+     </div>
+     <form class="needs-validation">
+        <div class="d-flex justify-content-end">
+           <button type="button" class="btn btn-outline-secondary me-3 px-4">Annuler</button>
+           <button type="button" (click)="Test()" class=" btn bg-c-bleu f-c-blanc d-flex pt-3 px-3">
+              <p>Sauvegarder</p>
+              <mat-icon class=" ps-1 icon icon-check">save</mat-icon>
+           </button>
+        </div>
+        <div class="col-12">
+
+           <div class="row g-3 align-items-center mt-5">
+              <div class="col-auto pe-sm-5 ">
+                 <label for="entreprise" class="col-form-label">
+                    <h2 class="f-c-med-gris">Entreprise</h2>
+                 </label>
+              </div>
+
+              <!-- Nom de l'entreprise -->
+              <div class="col">
+                 <input [(ngModel)]="entreprise.name" type="text" id="entreprise" class="form-control rounded-0" required >
+                 <div class="invalid-feedback">
+                    Un nom d'entreprise est requis
+                 </div>
+              </div>
+           </div>
+
+           <!-- Logo de l'entreprise -->
+           <div class="row g-3 align-items-center mb-5 pb-5">
+              <div class="col-auto pe-5 me-sm-5 ">
+                 <label for="logo" class="col-form-label me-2">
+                    <h2 class="f-c-med-gris">Logo</h2>
+                 </label>
+              </div>
+              <div class=" col input-group has-validation">
+                 <input [(ngModel)]="entreprise.imageUrl" type="file" class="form-control f-c-med-gris" id="logo" name="logo" required >
+                 <div class="invalid-feedback">
+                    Une image est requise.
+                 </div>
+              </div>
+           </div>
+        </div>
+
+        <!-- Présentation de l'entreprise -->
+        <div class="rounded p-5 bg-c-blanc">
+           <div class="row">
+              <div class="col-12 pb-4">
+
+                <!-- Courte présentation -->
+                 <h1 class="f-c-bleu">Courte présentation</h1>
+                 <div class="mb-3">
+                    <textarea [(ngModel)]="entreprise.description" class="form-control" id="exampleFormControlTextarea1" rows="3" name="courtePresentation"></textarea>
+                    <div class="invalid-feedback">
+                       Une description est requise
+                    </div>
+                 </div>
+              </div>
+
+              <!-- Personne contact -->
+              <div class="col-12 m-3 col-md-5 border-l-c-med-gris">
+                 <label for="adresse" class="form-label">Personne contact</label>
+                 <input [(ngModel)]="entreprise.contactName" type="text" class="form-control" id="adresse" placeholder="985, rue Royale" value="" required="" name="adresse">
+                 <div class="invalid-feedback">
+                    Un nom de personne contact est requis
+                 </div>
+              </div>
+              <div class="row py-3">
+                 <div class="col-12">
+                 </div>
+              </div>
+              <div class="row py-3">
+                 <div class="col-12">
+                    <h3 class="f-c-bleu">Information de contact</h3>
+                 </div>
+              </div>
+
+              <!-- Addresse -->
+              <div class="row">
+                 <div class="col-12 m-3 col-md-5 border-l-c-med-gris">
+                    <label for="adresse" class="form-label">Adresse</label>
+                    <input [(ngModel)]="entreprise.address" type="text" class="form-control" id="adresse" placeholder="985, rue Royale" value="" required="" name="adresse">
+                    <div class="invalid-feedback">
+                       Une adresse est requise.
+                    </div>
+                 </div>
+
+                 <!-- Télépone -->
+                 <div class="col-12 my-3 col-md-5 border-l-c-med-gris ms-3">
+                    <label for="telephone" class="form-label">Téléphone</label>
+                    <input [(ngModel)]="entreprise.contactPhone" type="text" class="form-control" id="telephone" placeholder="819 373-2235" value="" required="" name="telephone">
+                    <div class="invalid-feedback">
+                       Un  numéro de telephone est requis.
+                    </div>
+                 </div>
+              </div>
+
+              <!-- Ville -->
+              <div class="row">
+                 <div class="col-12 m-3 col-md-5 border-l-c-med-gris">
+                    <label for="ville" class="form-label">Ville</label>
+                    <input [(ngModel)]="entreprise.city" type="text" class="form-control" id="ville" placeholder="Trois-Rivières" value="" required="" name="ville">
+                    <div class="invalid-feedback">
+                       Un nom de ville est requis.
+                    </div>
+                 </div>
+
+                 <!-- Courriel -->
+                 <div class="col-12 m-3 col-md-5 border-l-c-med-gris ms-3">
+                    <label for="courriel" class="form-label">Courriel</label>
+                    <input [(ngModel)]="entreprise.contactEmail" type="email" class="form-control" id="Courriel" placeholder="info@mediavox.com" value="" required="" name="courriel">
+                    <div class="invalid-feedback">
+                       Un courriel valide est requis.
+                    </div>
+                 </div>
+              </div>
+
+              <!-- Province -->
+              <div class="row my-3">
+                 <div class="col-12 col-sm-6 border-l-c-med-gris ms-3">
+                    <label for="province" class="form-label">Province</label>
+                    <input [(ngModel)]="entreprise.province" type="text" class="form-control" id="province" placeholder="Québec" value="" required="" name="province">
+                    <div class="invalid-feedback">
+                       Un nom de province valide est requis.
+                    </div>
+                 </div>
+              </div>
+
+              <!-- Code postal -->
+              <div class="row my-3">
+                 <div class="col-12 col-sm-6 border-l-c-med-gris ms-3">
+                    <label for="codePostal" class="form-label">Code postal</label>
+                    <input [(ngModel)]="entreprise.postalCode" type="text" class="form-control" id="codePostal" placeholder="G9A 4H7" value="" required="">
+                    <div class="invalid-feedback">
+                       Un code postal est requis.
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+
+        <div class="d-flex justify-content-end pt-5 mt-4">
+           <button type="button" class="btn btn-outline-secondary me-3 px-4">Annuler</button>
+           <button type="button" (click)="Test()" class=" btn bg-c-bleu f-c-blanc d-flex pt-3 px-3">
+              <p>Sauvegarder</p>
+              <mat-icon class=" ps-1 icon icon-check">save</mat-icon>
+           </button>
+        </div>
+     </form>
+  </div>
+</main>

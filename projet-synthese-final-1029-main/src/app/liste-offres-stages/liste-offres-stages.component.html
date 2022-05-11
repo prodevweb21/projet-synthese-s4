@@ -1,0 +1,99 @@
+<!-- *** Fait par Émilie Stratford ***
+    Ceci est la liste des offres de stages présentée sous forme de tableau Angular Material
+    Structure montée également en fonction du Flexbox.
+-->
+
+<div class="liste-offre-stage">
+  <!-- Titre // gèré dans le .ts du component -->
+  <h1>{{ title }}</h1>
+  <!-- Titre du bouton // gèré dans le .ts du component -->
+  <a class="btnAction" routerLink="/ajout-offre">{{ btnAction }}</a>
+  <!-- Cette phrase est uniquement visible à partir de 900px pour indiquer 
+    à l'utilisateur de faire glisser vers la droite pour
+  afficher les détails des offres de stages -->
+  <span class="notice_MB"
+    >* Glisser vers la droite afin de voir les détails des offres de
+    stages</span
+  >
+  <!-- Début du tableau ici  -->
+  <div class="liste-offre-stage__items">
+    <table
+      mat-table
+      class="mat-elevation-z8 items-table"
+      [dataSource]="offrestage"
+    >
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="head-title-wrapper">
+            <span class="head-title">Poste</span>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let offrestage">
+          <div class="title_offer_wrapper title_offer_wrapper--inactive">
+            <div class="icon-box">
+              <mat-icon class="offer-icon">work</mat-icon>
+            </div>
+            <div class="title-offer-content">
+              <p class="small-text">{{ offrestage.title }}</p>
+              <span>{{ offrestage.enterprise }}</span>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="activitySector">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="head-title-wrapper activity">
+            <span class="head-title">Secteur d'activité</span>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let offrestage" class="stageType_MB">
+          {{ offrestage.stageType }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="region">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="head-title-wrapper region">
+            <span class="head-title region">Région</span>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let offrestage" class="region_MB">
+          Montréal
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="published">
+        <th mat-header-cell *matHeaderCellDef>
+          <div class="head-title-wrapper date">
+            <span class="head-title">Date de publication</span>
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let offrestage">2022-03-22</td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let offre of offrestage">
+          <div class="actions__wrapper">
+            <!-- Ce bouton permet d'accèder à la vue d'un stage  -->
+            <button class="actions__link" routerLink="/offre/{{ offre._id }}">
+              <mat-icon>remove_red_eye</mat-icon>
+            </button>
+            <!-- Ce bouton permet d'accèder au formulaire pour la mise à jour d'un stage  -->
+            <button class="" routerLink="/maj-offre/{{ offre._id }}" href="#">
+              <mat-icon class="actions__link--maj">update</mat-icon>
+            </button>
+            <!-- Ce bouton permet de supprimer un stage  -->
+            <button (click)="confirmDialog()" href="#">
+              <mat-icon class="actions__link--delete">delete</mat-icon>
+            </button>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let offrestage; columns: displayedColumns"></tr>
+    </table>
+    <!-- Fin du tableau ici -->
+  </div>
+</div>

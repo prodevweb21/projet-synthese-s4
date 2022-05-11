@@ -1,0 +1,190 @@
+<ng-container *ngIf="offre">
+  <div class="offer-view">
+    <div class="offer__wrapper">
+      <div class="offer-view__headContent">
+        <span>Offre de stage</span>
+        <h1 class="offer-view__title">{{ offre.title }}</h1>
+        <p class="offer-view__enterprise">{{ offre.enterprise }}</p>
+      </div>
+      <div class="offre-submitBtn up">
+        <button matSuffix type="submit" mat-raised-button (click)="goBack()">
+          Annuler
+        </button>
+        <button
+          matSuffix
+          type="submit"
+          mat-raised-button
+          [disabled]="!offreForm.form.valid"
+          (click)="onSave(offreForm)"
+        >
+          <mat-icon>save</mat-icon>Mettre à jour
+        </button>
+      </div>
+      <div class="offer-view__details-wrapper">
+        <form #offreForm="ngForm">
+          <mat-form-field appearance="fill" class="half-width">
+            <!-- Description -->
+            <mat-label>Description></mat-label>
+            <h2 class="details__title">Description de la tâche</h2>
+            <textarea
+              name="description"
+              cols="100"
+              rows="10"
+              require
+              [(ngModel)]="offre.description"
+            ></textarea>
+          </mat-form-field>
+          <!-- Programme de formation -->
+          <mat-form-field appearance="fill" class="half-width">
+            <mat-label>Programme de formation</mat-label>
+            <div class="offer-border">
+              <h3>Programme de formation</h3>
+              <input
+                type="text"
+                name="skills"
+                [(ngModel)]="offre.skills"
+                required
+                matInput
+                placeholder="AEC ou équivalent"
+              />
+            </div>
+          </mat-form-field>
+          <!-- Exigences -->
+          <mat-form-field appearance="fill" class="half-width">
+            <mat-label>Exigences</mat-label>
+            <div class="offer-border">
+              <h3>Exigences</h3>
+              <textarea
+                name="requirements"
+                id=""
+                placeholder="HTML, CSS, JavaScript, React, vue.js, GIT PHP, MySQL."
+                cols="100"
+                rows="10"
+                require
+                [(ngModel)]="offre.requirements"
+              ></textarea>
+            </div>
+          </mat-form-field>
+          <!-- ** Information sur le stage recherché ** -->
+          <h3 class="red-med-title">Informations sur le stage</h3>
+          <!-- Type de stage -->
+          <div class="infos__wrapper">
+            <mat-form-field appearance="fill" class="half-width">
+              <mat-label>Type de stage</mat-label>
+              <div class="offer-border">
+                <h3>Type de stage</h3>
+                <select
+                  name="stageType"
+                  id=""
+                  [(ngModel)]="offre.stageType"
+                  placeholder="Veuillez effectuer un choix"
+                  require
+                  matInput
+                >
+                  <option>Veuillez effectuer un choix</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                </select>
+              </div>
+            </mat-form-field>
+            <!-- Date de début -->
+            <mat-form-field appearance="fill" class="half-width">
+              <mat-label>Date de début</mat-label>
+              <div class="offer-border">
+                <h3>Date de début</h3>
+                <input
+                  type="date"
+                  name="startDate"
+                  placeholder=""
+                  require
+                  [(ngModel)]="offre.startDate"
+                />
+              </div>
+            </mat-form-field>
+            <!-- Nombre d'heures par semaines-->
+            <mat-form-field appearance="fill" class="half-width">
+              <mat-label>Nombre d'heures par semaines</mat-label>
+              <div class="offer-border">
+                <h3>Nombre d'heures par semaines</h3>
+                <select
+                  name="hoursPerWeek"
+                  id=""
+                  require
+                  [(ngModel)]="offre.hoursPerWeek"
+                >
+                  <option>Veuillez effectuer un choix</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                </select>
+              </div>
+            </mat-form-field>
+            <!-- Date de fin -->
+            <mat-form-field appearance="fill" class="half-width">
+              <mat-label>Date de fin</mat-label>
+              <div class="offer-border">
+                <h3>Date de fin</h3>
+                <input
+                  type="date"
+                  name="endDate"
+                  placeholder=""
+                  require
+                  [(ngModel)]="offre.endDate"
+                />
+              </div>
+            </mat-form-field>
+          </div>
+          <!-- Rémunération -->
+          <mat-form-field appearance="fill" class="half-width">
+            <mat-label>Rémunération</mat-label>
+            <div class="offer-border">
+              <h3>Rémunération</h3>
+              <div class="offer-checkbox">
+                <div class="offer-checkbox-item">
+                  <input type="checkbox" name="paid" placeholder="" />
+                  <label for="paid">À discuter</label>
+                </div>
+                <div class="offer-checkbox-item">
+                  <input type="checkbox" name="paid" placeholder="" />
+                  <label for="paid">Stage rémunéré</label>
+                </div>
+                <div class="offer-checkbox-item">
+                  <input type="checkbox" name="paid" placeholder="" />
+                  <label for="paid">Stage non rémunéré</label>
+                </div>
+              </div>
+            </div>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="half-width">
+            <mat-label>Informations supplémentaires</mat-label>
+            <h3 class="red-med-title">Informations supplémentaires</h3>
+            <textarea
+              name="additionnalInfo"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Lorem ipsum dolores"
+              require
+              [(ngModel)]="offre.additionalInfo"
+            ></textarea>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="offre-submitBtn">
+        <button matSuffix type="submit" mat-raised-button (click)="goBack()">
+          Annuler
+        </button>
+        <button
+          matSuffix
+          type="submit"
+          mat-raised-button
+          [disabled]="!offreForm.form.valid"
+          (click)="onSave(offreForm)"
+        >
+          <mat-icon>save</mat-icon>Mettre à jour
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-container>
